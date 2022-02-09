@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <ul id="lists">
+        <li class="list">Lorem, ipsum.</li>
+        <li class="list">Eos, maxime!</li>
+        <li class="list">Impedit, aliquid.</li>
+        <li class="list">Explicabo, facere.</li>
+    </ul>
+
+
+    <button id="add-list">add</button>
+
+
+
+
+    <script>
+
+        // const lists = document.getElementsByClassName('list');
+        // for (const list of lists) {
+
+        //     list.addEventListener('click', function () {
+        //         document.getElementById('lists').removeChild(list);
+        //     });
+
+        // }
+
+
+        //add items in the list 
+        document.getElementById('add-list').addEventListener('click', function () {
+
+            const item = document.createElement('li');
+            item.innerText = "Brand new item";
+            document.getElementById('lists').appendChild(item);
+
+        });
+
+
+        document.getElementById('lists').addEventListener('click', function (event) {
+
+            event.target.parentNode.removeChild(event.target);
+
+        });
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="margin: 100px;">
+
+    <h4 id="delete-value">Hello</h4>
+
+    <input type="text" id="input-field" placeholder="Please type Delete">
+
+    <button id="delete" disabled>Delete</button>
+
+
+    <script>
+
+        document.getElementById('delete').addEventListener('click', function () {
+            document.getElementById('delete-value').style.display = "none";
+        })
+
+        //focus
+        document.getElementById('input-field').addEventListener('focus', function () {
+            document.body.style.backgroundColor = "lightblue";
+        });
+        //blur
+        document.getElementById('input-field').addEventListener('blur', function () {
+            document.body.style.backgroundColor = "white";
+        });
+
+        //keyup
+        document.getElementById('input-field').addEventListener('keyup', function (event) {
+            // const deleteField = document.getElementById('input-field').value;
+            // console.log(deleteField);
+            const deleteBtn = document.getElementById('delete');
+            if (event.target.value == 'delete') {
+                deleteBtn.removeAttribute('disabled');
+            }
+            else {
+                deleteBtn.setAttribute('disabled', true);
+            }
+        });
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
