@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="margin: 50px;">
+    <div id="comment-section">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, non!</p>
+        <p>Cum neque nam natus magni a, eaque dolorem? Reprehenderit, dolorem.</p>
+        <p>Error eligendi commodi facilis eum dignissimos dolore. Cumque, unde amet.</p>
+    </div>
+
+    <textarea name="" id="comment-field" cols="30" rows="3">
+
+    </textarea> <br>
+    <button id="add-comment">Add Comment</button>
+
+
+    <script>
+
+        document.getElementById('add-comment').addEventListener('click', function () {
+            //create a paragraph event
+            const createComment = document.createElement('p');
+
+            //get the value from the  textarea field
+            const commentValue = document.getElementById('comment-field');
+
+            //set the textarea value in the new comment
+            createComment.innerText = commentValue.value;
+
+            //appent the value in the comment section
+            document.getElementById('comment-section').appendChild(createComment);
+
+
+
+
+        });
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

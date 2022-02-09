@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <p id="text"></p>
+    <input type="text" id="textField">
+    <button id="update">update</button>
+    <button onclick="update2()">update2</button>
+    <button id="update3">update3</button>
+
+    <Script>
+
+        document.getElementById('update').addEventListener('click', function () {
+
+            const textValue = document.getElementById('textField');
+            const p = document.getElementById('text');
+            p.innerText = textValue.value;
+            textValue.value = " ";
+        });
+
+
+        function update2() {
+            document.getElementById('text').innerText = "hello Update 2";
+        }
+
+
+        document.getElementById('update3').addEventListener('click', function () {
+            document.getElementById('text').innerText = "hello Update3";
+        })
+
+    </Script>
+
+</body>
+
+</html>
