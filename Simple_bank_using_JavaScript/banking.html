@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="container bg-red-600">
+        <h1 class="text-white text-center py-5 text-3xl font-bold"> <span class="text-white">Banking page</span>
+        </h1>
+    </header>
+
+
+    <!-- Balance & Transaction  -->
+
+    <section class="my-6">
+        <div class="grid grid-cols-3 gap-4 w-3/4 mx-auto">
+            <div class="text-white bg-orange-500 p-8">
+                <h3 class="text-3xl ">Deposite</h3>
+                <h4 class="text-4xl">$<span id="total-deposite">00</span> </h4>
+            </div>
+
+            <div class="text-white bg-pink-500 p-8">
+                <h3 class="text-3xl ">Withdraw</h3>
+                <h4 class="text-4xl">$<span id="total-withdraw">00</span></h4>
+            </div>
+
+            <div class="text-white bg-green-500 p-8">
+                <h3 class="text-3xl ">Balance</h3>
+                <h4 class="text-4xl">$1280</h4>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!-- Deposite & withdraw input section  -->
+    <section class="my-6">
+        <div class="grid grid-cols-2 gap-4 w-3/4 mx-auto">
+
+            <!-- deposite input field  -->
+            <div class=" bg-cyan-500 p-8">
+
+
+                <div>
+                    <div class="mb-3">
+                        <label for="" class="block text-2xl">Deposite</label>
+                        <input type="text" id="deposite-input"
+                            class="w-full border border-gray-600 rounded-md p-2 text-lg" placeholder="123">
+                    </div>
+
+                    <button class="bg-orange-500 py-2 px-4 rounded-md text-white" id="add-deposite">Submit</button>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- withdraw input field  -->
+            <div class=" bg-indigo-500 p-8">
+                <div>
+                    <div class="mb-3">
+                        <label for="" class="block text-2xl">Withdraw</label>
+                        <input type="text" id="withdraw-input"
+                            class="w-full border border-gray-600 rounded-md p-2 text-lg" placeholder="123">
+                    </div>
+
+                    <button class="bg-orange-500 py-2 px-4 rounded-md text-white" id="add-withdraw">Submit</button>
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+    <script src="js/banking.js"></script>
+
+</body>
+
+</html>
