@@ -15,17 +15,6 @@ document.getElementById('submit').addEventListener('click', function () {
 });
 
 
-// add deposite value 
-
-document.getElementById('add-deposite').addEventListener('click', function () {  //deposite button id = add-deposite
-    // const totalDeposite = document.getElementById('total-deposite');
-
-    // const addDeposite = document.getElementById('dedeposite-input');
-    console.log("addDepositvalue");
-
-
-
-});
 
 
 
