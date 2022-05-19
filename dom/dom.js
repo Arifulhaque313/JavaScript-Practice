@@ -17,3 +17,8 @@ function blue() {
 const yellow = document.getElementById('yellow').addEventListener('click', function () {
     document.body.style.backgroundColor = "yellow";
 });
+
+
+//  ---------gitdelete----------
+
+

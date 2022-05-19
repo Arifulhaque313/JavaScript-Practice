@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="paragraph"></p>
+    <label for="">Insert First Value</label>
+    <input type="text" id="first_value"> <br> <br>
+
+    <label for="">Insert Second Value</label>
+    <input type="text" id="second_value"> <br><br>
+    <button id="btn">Click</button> <br><br>
+
+    <p id="p2">Hello Ariful</p>
+    <button id="btn2">Click</button>
+
+    <hr><br>
+
+    <div id="comment_container">
+        <p>New commnet</p>
+        <p>New commnet</p>
+        <p>New commnet</p>
+
+
+    </div>
+
+    <textarea id="new_comment" name="" id="" cols="30" rows="5">
+    </textarea><br>
+    <button id="btn3">comment</button>
+
+    <style>
+        .bg {
+            background-color: aqua;
+            margin: 50px;
+            padding: 50px;
+        }
+    </style>
+
+    <script>
+
+        const first_value = document.getElementById("first_value");
+        const second_value = document.getElementById("second_value");
+
+        const btn = document.getElementById("btn");
+        btn.onclick = color;
+
+        function color() {
+            document.getElementById("paragraph").innerText = parseInt(first_value.value) + parseInt(second_value.value);
+            first_value.value = " ";
+            second_value.value = " ";
+
+            document.body.classList.add("bg");
+        }
+
+        document.getElementById("btn2").addEventListener('click', function () {
+            document.getElementById('p2').toggle.style.color = "red";
+        });
+
+        // add commnet
+
+        const btn3 = document.getElementById("btn3");
+
+        btn3.addEventListener('click', function () {
+            const create_comment = document.createElement('p');
+
+            const new_comment = document.getElementById("new_comment");
+            const comment_container = document.getElementById("comment_container");
+            create_comment.innerText = new_comment.value
+
+            comment_container.appendChild(create_comment);
+
+            new_comment.value = " ";
+
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>
