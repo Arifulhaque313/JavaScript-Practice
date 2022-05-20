@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegate</title>
+</head>
+
+<body>
+
+    <h3>This is list</h3>
+    <ul id="list-container">
+        <li class="item">Item1</li>
+        <li class="item">Item2</li>
+        <li class="item">Item3</li>
+        <li class="item">Item4</li>
+    </ul>
+
+    <button id="btn1">add</button>
+    <script>
+        document.getElementById("btn1").addEventListener('click', function () {
+            const li = document.createElement("li");
+            li.innerText = "Brand new item";
+            document.getElementById("list-container").appendChild(li);
+
+        });
+
+
+        document.getElementById("list-container").addEventListener('click', function (event) {
+            // event.target.parentNode.removeChield(event.target);
+            // console.log(event.target.parentNode);
+            event.target.parentNode.removeChild(event.target);
+        });
+
+
+    </script>
+</body>
+
+</html>
